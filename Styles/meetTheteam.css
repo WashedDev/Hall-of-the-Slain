@@ -1,0 +1,121 @@
+.team-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-intro {
+    margin-bottom: 50px;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 40px 0 20px;
+    color: #333;
+    border-bottom: 2px solid #5865F2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Responsive Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* Card Styling */
+.player-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-top: 5px solid #333;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.leader-card {
+    border-top-color: #5865F2; /* Distinct color for leadership */
+}
+
+.valhallan {
+    background: linear-gradient(145deg, #ffffff, #f0f0ff);
+    border-top-color: #9146FF; /* Purple for high rank */
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.card-header span {
+    font-size: 0.85rem;
+    color: #5865F2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-body {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.card-body p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.role-desc {
+    font-style: italic;
+    font-size: 0.85rem !important;
+    color: #777 !important;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.player-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f0f0f0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.player-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-card:hover .player-img {
+    transform: scale(1.05);
+    border-color: #5865F2;
+}
+
+/* Adjust card text alignment for the image layout */
+.card-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 5px;
+}
