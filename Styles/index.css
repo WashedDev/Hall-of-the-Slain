@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+/* --- Intro Section --- */
+.intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    /* MAGIC FIX: Scales between 3rem (mobile) and 12rem (desktop) */
+    font-size: clamp(3rem, 10vw, 12rem); 
+    text-align: center;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    /* MAGIC FIX: Scales text so it's readable on phone but big on desktop */
+    font-size: clamp(1rem, 3vw, 30px);
+    text-align: center;
+    padding: 5px;
+    color: white;
+    max-width: 800px; /* Prevents text from stretching too wide on 4k screens */
+}
+
+/* --- Socials Section --- */
+.socials {
+    text-align: center;
+    background-color: white;
+    color: black;
+    /* Removed fixed height (250px) to prevent overflow on mobile */
+    padding: 40px 20px; 
+    border-radius: 10px; /* Optional: adds nice curve if inside a grey container */
+}
+
+.socials p {
+    font-size: clamp(1rem, 2vw, 20px);
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#socials {
+    padding: 40px 20px; /* Increased padding */
+    margin: 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.socials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #3b3b3b;
+    padding: 10px;
+}
+
+/* Icon Container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows icons to wrap if screen is tiny */
+    gap: 20px;
+}
+
+/* Base Icon Style */
+.s-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.s-icon:hover {
+    transform: translateY(-8px);
+    color: #fff;
+}
+
+/* Brand Colors */
+.discord:hover { background-color: #5865F2; box-shadow: 0 10px 20px rgba(88, 101, 242, 0.4); }
+.twitter:hover { background-color: #000000; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+.youtube:hover { background-color: #FF0000; box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4); }
+.twitch:hover { background-color: #9146FF; box-shadow: 0 10px 20px rgba(145, 70, 255, 0.4); }
+
+/* --- Merch Section --- */
+#merch {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #121212;
+}
+
+.merch-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.merch-content p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Grid Layout - Already good, just tweaking min-width for safety */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Lowered min-width slightly for smaller phones */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.merch-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.merch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.merch-img {
+    height: 300px;
+    overflow: hidden;
+}
+
+.merch-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.merch-card:hover .merch-img img {
+    transform: scale(1.1);
+}
+
+.merch-info {
+    padding: 20px;
+}
+
+.merch-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #5865F2;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.merch-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.merch-btn:hover {
+    background-color: #5865F2;
+}
+
+/* --- Content Section --- */
+#content {
+    background-color: #1a1c23;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.content-header p {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for mobile compatibility */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #5865F2;
+}
+
+/* --- Footer Section --- */
+.main-footer {
+    background-color: #0b0c10;
+    color: #abb2bf;
+    padding: 60px 20px 20px;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    text-align: left; /* Ensures footer text aligns nicely on mobile */
+}
+
+/* Center footer text only on very small screens if desired */
+@media(max-width: 500px) {
+    .footer-container {
+        text-align: center;
+    }
+    .footer-socials {
+        justify-content: center;
+    }
+}
+
+.footer-col h3, .footer-col h4 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #abb2bf;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #5865F2;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1f2833;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.legal-links {
+    margin-top: 10px;
+}
+
+.legal-links a {
+    margin: 0 5px;
+}
