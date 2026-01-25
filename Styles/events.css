@@ -1,3 +1,9 @@
+.events-intro {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Barlow', sans-serif;
+}
+
 .events-container {
     max-width: 1000px;
     margin: 0 auto;
